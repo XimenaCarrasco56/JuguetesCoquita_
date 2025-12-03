@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos - Juguetería Coquita</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    /* === MODAL === */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      animation: slideUp 0.5s ease forwards;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .modal-content img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .close-btn:hover {
+      color: #ff6b6b;
+    }
+
+    .add-cart {
+      background-color: #ff6b6b;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: transform 0.2s, background-color 0.3s;
+      font-weight: bold;
+    }
+    .add-cart:hover {
+      background-color: #e25555;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Juguetería Coquita</h1>
+      <br>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#sobre">Sobre Nosotros</a></li>
+          <li><a href="products.html">Productos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="productos" class="products">
+  <div class="container">
+    <br><br>
+    <p style="text-align:center; color:#ff6b6b; font-weight:bold;">
+      *Los juguetes pueden variar según disponibilidad y stock.*
+    </p>
+    <h2>Nuestros Juguetes Destacados</h2>
+    <div class="grid">
+      <!-- productos aquí -->
+
+        <!-- ===== TODOS LOS PRODUCTOS ===== -->
+        <div class="product-card"><img src="spidy2.png.jpeg" alt="Spider-Man Titan Hero"><div class="product-info"><h3>Spider-Man Titan Hero</h3><p>Figura articulada de tu héroe favorito.</p><div class="price">$230 mx</div><button class="add-cart" data-name="Spider-Man Titan Hero" data-price="$230 mx" data-img="spidy2.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="patitas.png.jpeg" alt="Patitas Peluche"><div class="product-info"><h3>Patitas Peluche</h3><p>Suave y adorable compañero para abrazar.</p><div class="price">$35 mx</div><button class="add-cart" data-name="Patitas Peluche" data-price="$35 mx" data-img="patitas.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="estrella.png.jpeg" alt="Estrellita Musical"><div class="product-info"><h3>Estrellita Musical</h3><p>Brilla y canta melodías suaves.</p><div class="price">$35 mx</div><button class="add-cart" data-name="Estrellita Musical" data-price="$35 mx" data-img="estrella.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="hulk.png.jpeg" alt="Hulk Figura de Acción"><div class="product-info"><h3>Hulk Figura de Acción</h3><p>El increíble Hulk para los más fuertes del hogar.</p><div class="price">$65 mx</div><button class="add-cart" data-name="Hulk Figura de Acción" data-price="$65 mx" data-img="hulk.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="babrie.png.jpeg" alt="Barbie Fashion Star"><div class="product-info"><h3>Barbie Fashion Star</h3><p>La muñeca más glamorosa con atuendos únicos.</p><div class="price">$270 mx</div><button class="add-cart" data-name="Barbie Fashion Star" data-price="$270 mx" data-img="babrie.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="mario.png.jpeg" alt="Mario Bros Figura"><div class="product-info"><h3>Mario Bros Figura</h3><p>Salta al mundo de los videojuegos con Mario.</p><div class="price">$250 mx</div><button class="add-cart" data-name="Mario Bros Figura" data-price="$250 mx" data-img="mario.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="stitch.png.jpeg" alt="Stitch Peluche"><div class="product-info"><h3>Stitch Peluche</h3><p>El travieso extraterrestre en versión abrazable.</p><div class="price">$280 mx</div><button class="add-cart" data-name="Stitch Peluche" data-price="$280 mx" data-img="stitch.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="basta.png.jpeg" alt="Juego Basta! Familiar"><div class="product-info"><h3>Juego Basta! Familiar</h3><p>Diviértete con tus amigos adivinando palabras.</p><div class="price">$180 mx</div><button class="add-cart" data-name="Juego Basta! Familiar" data-price="$180 mx" data-img="basta.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="carritos.png.jpeg" alt="Set de Carritos Turbo"><div class="product-info"><h3>Set de Carritos Turbo</h3><p>Corre, colecciona y gana con estos mini autos.</p><div class="price">$10 mx</div><button class="add-cart" data-name="Set de Carritos Turbo" data-price="$10 mx" data-img="carritos.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="caradepapa.png.jpeg" alt="Señor Cara de Papa"><div class="product-info"><h3>Señor Cara de Papa</h3><p>Arma y cambia su cara con piezas divertidas.</p><div class="price">$252 mx</div><button class="add-cart" data-name="Señor Cara de Papa" data-price="$252 mx" data-img="caradepapa.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="nerf1.png.jpeg" alt="Nerf Blaster Turbo"><div class="product-info"><h3>Nerf Blaster Turbo</h3><p>Dispara con precisión y gana la batalla.</p><div class="price">$210 mx</div><button class="add-cart" data-name="Nerf Blaster Turbo" data-price="$210 mx" data-img="nerf1.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="spidy1.png.jpeg" alt="Spider-Man Junior"><div class="product-info"><h3>Spider-Man Junior</h3><p>Versión pequeña del héroe arácnido.</p><div class="price">$65 mx</div><button class="add-cart" data-name="Spider-Man Junior" data-price="$65 mx" data-img="spidy1.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="stitchazul.png.jpeg" alt="Stitch Azul Peluche"><div class="product-info"><h3>Stitch Azul Peluche</h3><p>Versión especial del tierno Stitch en azul celeste.</p><div class="price">$25 mx</div><button class="add-cart" data-name="Stitch Azul Peluche" data-price="$25 mx" data-img="stitchazul.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="pez.png.jpeg" alt="Pez Saltarín de Goma"><div class="product-info"><h3>Pez Saltarín de Goma</h3><p>Un juguete divertido para horas de juego acuático.</p><div class="price">$35 mx</div><button class="add-cart" data-name="Pez Saltarín de Goma" data-price="$35 mx" data-img="pez.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="pantera.png.jpeg" alt="Pantera Negra Figura"><div class="product-info"><h3>Pantera Negra Figura</h3><p>El rey de Wakanda listo para proteger tu colección.</p><div class="price">$65 mx</div><button class="add-cart" data-name="Pantera Negra Figura" data-price="$65 mx" data-img="pantera.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="ca.png.jpeg" alt="Capitán América Escudo"><div class="product-info"><h3>Capitán América Escudo</h3><p>Defiende la justicia con este legendario superhéroe.</p><div class="price">$65 mx</div><button class="add-cart" data-name="Capitán América Escudo" data-price="$65 mx" data-img="ca.png.jpeg">Ver más</button></div></div>
+
+        <!-- ===== Nuevos productos ===== -->
+        <div class="product-card"><img src="basta.png.jpeg" alt="Basta mini."><div class="product-info"><h3>perfecto para tus reuniones o fiestas</h3><p>perfecto para tus reuniones o fiestas.</p><div class="price">$218 mx</div><button class="add-cart" data-name="Muñeca Cenicienta" data-price="$150 mx" data-img="basta.png.jpeg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="wason.png" alt="Figura de Wason"><div class="product-info"><h3>Figura de Wason</h3><p>Juega con cuidado con Wason.</p><div class="price">$230 mx</div><button class="add-cart" data-name="Fugura Wason" data-price="$218 mx" data-img="wason.png">Ver más</button></div></div>
+
+        <div class="product-card"><img src="cenicienta.png" alt="Juega him horas con Cenicienta."><div class="product-info"><h3>Plastilina PlayDo</h3><p>Diviertete creando tu propio arte Play Do.</p><div class="price">$230 mx</div><button class="add-cart" data-name="paquete Play Do" data-price="$230 mx" data-img="">Ver más</button></div></div>
+
+        <div class="product-card"><img src="minions.png" alt="Minions fiesta + sorpresa"><div class="product-info"><h3>Minions fiesta + sorpresa</h3><p>Dieviertete con tus amigos con los minions y una sorpresa extra.</p><div class="price">$200 mx</div><button class="add-cart" data-name="Minions fiesta + sorpresa" data-price="$218 mx" data-img="minions.png">Ver más</button></div></div>
+
+        <div class="product-card"><img src="juego de mesa.jpg.png" alt="Monopoly de Toy story."><div class="product-info"><h3>Juega Monopoly con los personajes de Toy story</h3><p>Juega Monopoly con los personajes de Toy story.</p><div class="price">$200 mx</div><button class="add-cart" data-name="Monopoly de Toy story" data-price="$200 mx" data-img="juego de mesa.jpg">Ver más</button></div></div>
+
+        <div class="product-card"><img src="tarjetas.jpg" alt="Tarjetas para album."><div class="product-info"><h3>Tarjetas para tus albumes</h3><p>Obten tus tarjetas para tus albumes.</p><div class="price">$12 mx c/u</div><button class="add-cart" data-name="Tarjetas para album" data-price="$12 mx c/u" data-img="tarjetas.jpg">Ver más</button></div></div>
+        
+        <div class="product-card"><img src="harry.jpg" alt="Figuras de Harry Potter."><div class="product-info"><h3>Figuras coleccionables de Harry Potter.</h3><p>Colecciona los personajes de tu casa preferida..</p><div class="price">$490 mx</div><button class="add-cart" data-name="Figuras coleccionables de Harry Potter." data-price="$490 mx" data-img="harry.jpg">Ver más</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODAL ===== -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modalImg" src="" alt="Producto">
+    <h3 id="modalName"></h3>
+    <p id="modalPrice"></p>
+  </div>
+</div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Juguetería Coquita. Todos los derechos reservados.</p>
+      <p><a href="contact.html">Contáctanos</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // === MODAL FUNCTIONALIDAD ===
+    const modal = document.getElementById("productModal");
+    const closeBtn = document.querySelector(".close-btn");
+    const modalImg = document.getElementById("modalImg");
+    const modalName = document.getElementById("modalName");
+    const modalPrice = document.getElementById("modalPrice");
+
+    document.querySelectorAll(".add-cart").forEach(btn => {
+      btn.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = btn.dataset.img;
+        modalName.textContent = btn.dataset.name;
+        modalPrice.textContent = btn.dataset.price;
+      });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = e => { if (e.target == modal) modal.style.display = "none"; };
+
+    // === EFECTO DE COMPRA ===
+    const buyBtn = document.getElementById("buyBtn");
+    buyBtn.addEventListener("click", () => {
+      buyBtn.textContent = "¡Agregado!";
+      buyBtn.style.backgroundColor = "#27ae60";
+      setTimeout(() => {
+        buyBtn.textContent = "Agregar al carrito 🛒";
+        buyBtn.style.backgroundColor = "#ff6b6b";
+        modal.style.display = "none";
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

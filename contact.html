@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Juguetería Coquita</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* --- Estilos generales --- */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #a0d8ef, #e6f7ff);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Encabezado --- */
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 10px 0 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+            transform: scale(1.1);
+        }
+
+        /* --- Sección de contacto --- */
+        .contact {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem;
+        }
+
+        .contact h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 2rem 3rem;
+            max-width: 600px;
+            text-align: left;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .contact-card ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact-card li {
+            margin-bottom: 1rem;
+        }
+
+        .contact-card i {
+            color: #4a90e2;
+            margin-right: 10px;
+        }
+
+        .contact p {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            color: #555;
+        }
+
+        /* --- Mapa --- */
+        .map-container {
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- Animaciones --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 600px) {
+            .contact-card {
+                padding: 1.5rem;
+            }
+
+            .contact h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Juguetería Coquita</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#sobre">Sobre Nosotros</a></li>
+                    <li><a href="products.html">Productos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contacto" class="contact">
+        <h2>Contáctanos</h2>
+        <div class="contact-card">
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i><strong>Dirección:</strong> Fraccionamiento Hacienda Cuautitlán, calle Hacienda el Nogal</li>
+                <li><i class="fa-solid fa-map-pin"></i><strong>Referencia:</strong> Papelería-Internet frente a la Casa de la Cultura, cerca de la torre de agua</li>
+                <li><i class="fa-solid fa-phone"></i><strong>Teléfono:</strong> (55) 1900 3914</li>
+                <li><i class="fa-solid fa-envelope"></i><strong>Correo:</strong> xrepizo9@gmail.com</li>
+            </ul>
+            <p><strong>¡Estamos aquí para ayudarte a encontrar el juguete perfecto!</strong></p>
+        </div>
+
+        <div class="map-container">
+            <h3>¡Visítanos!</h3>   
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.979178395434!2d-99.1380003!3d19.4770001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f02c3a7a7aef%3A0x1d2b3a66f08a5d2b!2sFraccionamiento%20Hacienda%20Cuautitl%C3%A1n%2C%20Calle%20Hacienda%20el%20Nogal%2C%20Cuautitl%C3%A1n%20Izcalli%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1730065200000!5m2!1ses-419!2smx" 
+                width="100%" 
+                height="350" 
+                style="border:0; border-radius:10px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Juguetería Coquita. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
